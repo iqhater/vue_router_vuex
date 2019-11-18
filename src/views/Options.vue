@@ -3,9 +3,9 @@
     <FindBar />
     <div class="checkboxes">
       <el-checkbox
-        v-for="checkbox in checkboxes"
+        v-for="(checkbox, index) in checkboxes"
         :key="checkbox.label"
-        :label="checkbox.label"
+        :label="$t(`options.checkboxes.${'label' + ++index}`)"
         :checked="checkbox.checked"
         v-model="checkbox.checked"
         size="medium"
@@ -14,12 +14,12 @@
       ></el-checkbox>
     </div>
 
-    <h4>Select option:</h4>
+    <h4>{{ $t("options.dropdown.title") }}:</h4>
     <el-select v-model="value" placeholder="Select" @change="handleDropdownOption()">
       <el-option
-        v-for="item in options"
+        v-for="(item, index) in options"
         :key="item.value"
-        :label="item.label"
+        :label="$t(`options.dropdown.${'option' + ++index + '.label'}`)"
         :value="item.value"
         :disabled="item.disabled"
       ></el-option>
@@ -37,46 +37,46 @@ export default {
     return {
       checkboxes: [
         {
-          label: "Option 1",
+          label: this.$t("options.checkboxes.label1"),
           checked: true
         },
         {
-          label: "Option 2",
+          label: this.$t("options.checkboxes.label2"),
           checked: false
         },
         {
-          label: "Option 3",
+          label: this.$t("options.checkboxes.label3"),
           checked: false
         },
         {
-          label: "Option 4",
+          label: this.$t("options.checkboxes.label4"),
           checked: false
         }
       ],
       options: [
         {
-          value: "One",
-          label: "One 1"
+          value: this.$t("options.dropdown.option1.value"),
+          label: this.$t("options.dropdown.option1.label")
         },
         {
-          value: "Two",
-          label: "Two 2",
+          value: this.$t("options.dropdown.option2.value"),
+          label: this.$t("options.dropdown.option2.label"),
           disabled: true
         },
         {
-          value: "Three",
-          label: "Three 3"
+          value: this.$t("options.dropdown.option3.value"),
+          label: this.$t("options.dropdown.option3.label")
         },
         {
-          value: "Four",
-          label: "Four 4"
+          value: this.$t("options.dropdown.option4.value"),
+          label: this.$t("options.dropdown.option4.label")
         },
         {
-          value: "Five",
-          label: "Five 5"
+          value: this.$t("options.dropdown.option5.value"),
+          label: this.$t("options.dropdown.option5.label")
         }
       ],
-      value: "One 1"
+      value: this.$t("options.dropdown.option1.value")
     };
   },
   methods: {
@@ -85,12 +85,11 @@ export default {
     handleCheckboxes() {
       this.updateCheckboxes(this.checkboxes.filter(obj => obj.checked));
     },
-    handleDropdownOption() { 
+    handleDropdownOption() {
       this.updateDropdown(this.value);
     }
   },
   async mounted() {
-    // this.bookingInfo.checkboxes
     this.handleCheckboxes();
     this.handleDropdownOption();
   },

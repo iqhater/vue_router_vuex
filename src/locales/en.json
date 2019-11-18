@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "home": "Home",
+    "options": "Options",
+    "user": "User info",
+    "faq": "FAQ",
+    "order": "Order"
+  },
+  "options": {
+    "checkboxes": {
+      "label1": "Option 1",
+      "label2": "Option 2",
+      "label3": "Option 3",
+      "label4": "Option 4"
+    },
+    "dropdown": {
+      "title": "Select option",
+      "option1": {
+        "value": "One",
+        "label": "One 1"
+      },
+      "option2": {
+        "value": "Two",
+        "label": "Two 2"
+      },
+      "option3": {
+        "value": "Three",
+        "label": "Three 3"
+      },
+      "option4": {
+        "value": "Four",
+        "label": "Four 4"
+      },
+      "option5": {
+        "value": "Five",
+        "label": "Five 5"
+      }
+    }
+  },
+  "user": {
+    "title": "User info",
+    "firstName": {
+      "title": "First Name",
+      "error1": "Please input correct first name",
+      "error2": "Length should be 2 to 18"
+    },
+    "lastName": "Last Name",
+    "email": {
+      "title": "Email",
+      "error1": "Please input email address",
+      "error2": "Please input correct email address"
+    },
+    "reset": "Reset"
+  },
+  "faq": {
+    "section1": {
+      "title": "Consistency",
+      "description": {
+        "block1": "Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to.",
+        "block2": "Consistent within interface: all elements should be consistent, such as: design style, icons and texts, position of elements, etc."
+      }
+    },
+    "section2": {
+      "title": "Feedback",
+      "description": {
+        "block1": "Operation feedback: enable the users to clearly perceive their operations by style updates and interactive effects.",
+        "block2": "Visual feedback: reflect current state by updating or rearranging elements of the page."
+      }
+    },
+    "section3": {
+      "title": "Efficiency",
+      "description": {
+        "block1": "Simplify the process: keep operating process simple and intuitive.",
+        "block2": "Definite and clear: enunciate your intentions clearly so that the users can quickly understand and make decisions.",
+        "block3": "Easy to identify: the interface should be straightforward, which helps the users to identify and frees them from memorizing and recalling."
+      }
+    },
+    "section4": {
+      "title": "Controllability",
+      "description": {
+        "block1": "Decision making: giving advices about operations is acceptable, but do not make decisions for the users.",
+        "block2": "Controlled consequences: users should be granted the freedom to operate, including canceling, aborting or terminating current operation."
+      }
+    },
+    "section5": {
+      "title": "Performance",
+      "description": {
+        "block1": "A performance code requires that the building as a whole performs to a certain standard, e.g. uses less energy than the same building built to prescriptive code.",
+        "block2": "However, in developing and using our software, we have found that there are often thousands or tens of thousands of dollars in construction and material costs to be saved by following the performance path.",
+        "block3": "The reason people don’t follow the Performance path is that it requires either an energy rater or complex energy modelling software (or both)."
+      }
+    }
+  },
+  "order": {
+    "booking": {
+      "title": "Booking info",
+      "startDate": "Start Date:",
+      "endDate": "End Date:",
+      "selectedCheckboxes": "Selected checkboxes:",
+      "selectedOption": "Selected option:"
+    },
+    "user": {
+      "title": "User info",
+      "firstName": "First Name:",
+      "lastName": "Last Name:",
+      "email": "Email:"
+    },
+    "terms": {
+      "title": "I have read and agree to the",
+      "link": "Terms and Conditions",
+      "modal": {
+        "title": "Terms and Conditions",
+        "description": "It should be noted that the content will not be aligned in center by default. You can click on cancel button or exit icon at the right top position or just click outside dialog window.",
+        "cancel": "Cancel"
+      }
+    },
+    "send": "Send order",
+    "success": "Success! Thank you for order."
+  },
+  "findBar": {
+    "title": "Choose Dates",
+    "separator": "To",
+    "start": "Start date",
+    "end": "End date"
+  }
+}

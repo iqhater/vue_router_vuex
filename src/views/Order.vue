@@ -1,51 +1,59 @@
 <template>
   <div class="order">
-    <el-divider>Booking info</el-divider>
+    <el-divider>{{ $t("order.booking.title") }}</el-divider>
     <h4>
-      Start Date:
+      {{ $t("order.booking.startDate") }}
       <span>10-11-2019</span>
     </h4>
     <h4>
-      End Date:
+      {{ $t("order.booking.endDate") }}
       <span>15-11-2019</span>
     </h4>
     <h4>
-      Selected checkboxes:
-      <span
-        v-for="checkmark in handleCheckboxes()"
-        :key="checkmark.label"
-      >{{ checkmark.label }}</span>
+      {{ $t("order.booking.selectedCheckboxes") }}
+      <span v-for="checkmark in handleCheckboxes()" :key="checkmark.label">{{
+        checkmark.label
+      }}</span>
     </h4>
     <h4>
-      Selected option:
+      {{ $t("order.booking.selectedOption") }}
       <span>{{ handleDropdownOption() }}</span>
     </h4>
-    <el-divider>User info</el-divider>
+    <el-divider>{{ $t("order.user.title") }}</el-divider>
     <h4>
-      First Name:
+      {{ $t("order.user.firstName") }}
       <span>{{ handleName() }}</span>
     </h4>
     <h4>
-      Last Name:
+      {{ $t("order.user.lastName") }}
       <span>{{ handleSurName() }}</span>
     </h4>
     <h4>
-      Email:
+      {{ $t("order.user.email") }}
       <span>{{ handleEmail() }}</span>
     </h4>
     <el-divider id="bottom-divider"></el-divider>
     <el-checkbox v-model="checked">
-      <i>I have read and agree to the
-      <a
-        href="#"
-        type="text"
-        @click="centerDialogVisible = true"
-      >Terms and Conditions</a>.</i>
+      <i
+        >{{ $t("order.terms.title") }}
+        <a href="#" type="text" @click="centerDialogVisible = true"
+          >{{ $t("order.terms.link") }}</a
+        >.</i
+      >
     </el-checkbox>
-    <el-dialog title="Terms and Conditions" :visible.sync="centerDialogVisible" width="30%" center>
-      <span>It should be noted that the content will not be aligned in center by default. You can click on cancel button or exit icon at the right top position or just click outside dialog window.</span>
+    <el-dialog
+      :title='$t("order.terms.modal.title")'
+      :visible.sync="centerDialogVisible"
+      width="30%"
+      center
+    >
+      <span
+        >{{ $t("order.terms.modal.description") }}</span
+      >
       <span slot="footer" class="dialog-footer">
-        <el-button type="info" plain @click="centerDialogVisible = false">Cancel</el-button>
+        <el-button type="info" plain @click="centerDialogVisible = false"
+          >{{ $t("order.terms.modal.cancel") }}</el-button
+        >
       </span>
     </el-dialog>
     <el-button
@@ -53,8 +61,12 @@
       type="primary"
       plain
       :disabled="!checked"
-      @click.prevent="successNotification();clearLocalStorage();"
-    >Send order</el-button>
+      @click.prevent="
+        successNotification();
+        clearLocalStorage();
+      "
+      >{{ $t("order.send") }}</el-button
+    >
   </div>
 </template>
 
@@ -101,7 +113,7 @@ export default {
         }); */
       this.$message({
         showClose: true,
-        message: "Success! Thank you for order.",
+        message: this.$t('order.success'),
         type: "success",
         duration: 4000
       });

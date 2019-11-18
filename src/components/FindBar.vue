@@ -1,13 +1,13 @@
 <template>
   <div class="search">
     <div class="block">
-      <h4 class="demonstration">Choose Dates:</h4>
+      <h4 class="demonstration">{{ $t("findBar.title") }}:</h4>
       <el-date-picker
         v-model="dates"
         type="datetimerange"
-        range-separator="To"
-        start-placeholder="Start date"
-        end-placeholder="End date"
+        :range-separator='$t("findBar.separator")'
+        :start-placeholder='$t("findBar.start")'
+        :end-placeholder='$t("findBar.end")'
       ></el-date-picker>
     </div>
   </div>
@@ -24,7 +24,6 @@ export default {
   computed: mapGetters(["bookingInfo"]),
   methods: mapMutations(["updateStartDate", "updateEndDate"]),
   async mounted() {
-    
     // init stored dates
     const startDate = localStorage.getItem("startDate");
     const endDate = localStorage.getItem("endDate");
