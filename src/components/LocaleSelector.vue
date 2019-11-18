@@ -47,9 +47,10 @@ export default {
   left: 90px;
 }
 .flags {
-  width: 24px;
+  vertical-align: middle;
+  width: 22px;
   margin-right: 10px;
-  margin-top: 10px;
+  margin-top: -2px;
 }
 .el-dropdown-link {
   cursor: pointer;
