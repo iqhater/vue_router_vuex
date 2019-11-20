@@ -8,6 +8,7 @@
         :range-separator='$t("findBar.separator")'
         :start-placeholder='$t("findBar.start")'
         :end-placeholder='$t("findBar.end")'
+        @change="handleDates"
       ></el-date-picker>
     </div>
   </div>
@@ -22,27 +23,41 @@ export default {
     msg: String
   },
   computed: mapGetters(["bookingInfo"]),
-  methods: mapMutations(["updateStartDate", "updateEndDate"]),
+  methods: {
+    ...mapMutations(["updateStartDate", "updateEndDate"]),
+    handleDates() {
+      // value-format="d-MM-yyyy" attribute in el-date-picker
+      const startDate = `${this.dates[0].getDate()}-${this.dates[0].getMonth()}-${this.dates[0].getFullYear()}`;
+      const endDate = `${this.dates[1].getDate()}-${this.dates[1].getMonth()}-${this.dates[1].getFullYear()}`;
+
+      this.updateStartDate(startDate);
+      this.updateEndDate(endDate);
+    },
+  },
   async mounted() {
     // init stored dates
     const startDate = localStorage.getItem("startDate");
-    const endDate = localStorage.getItem("endDate");
+    const endDate = localStorage.getItem("endDate"); 
 
-    if (startDate || endDate) {
+    if (startDate && endDate) {
       this.updateStartDate(startDate);
       this.updateEndDate(endDate);
     } else {
-      this.updateStartDate(new Date());
-      this.updateEndDate(7);
-    }
+      const date = new Date();
+      const defaultDays = 6;
 
-    // console.log(this.bookingInfo.startDate);
-    // console.log(this.bookingInfo.endDate);
+      const startDate = `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`;
+      date.setDate(date.getDate() + defaultDays);
+      const endDate = `${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`;
+      
+      this.updateStartDate(startDate);
+      this.updateEndDate(endDate);
+    }
   },
   data() {
     return {
       // value1: [new Date(), new Date(2019, 11, 27, 10, 10)]
-      dates: [new Date(), new Date().setDate(new Date().getDate() + 7)]
+      dates: [new Date(), new Date().setDate(new Date().getDate() + 6)]
     };
   }
 };

@@ -2,7 +2,7 @@
   <div class="locale">
     <el-dropdown @command="setLocale">
       <span class="el-dropdown-link">
-        <img :src="getImgUrl()" alt="flag" class="flags" />
+        <img :src="getImgUrl" alt="flag" class="flags" />
         <span>{{ $i18n.locale.toUpperCase() }}</span>
         <i class="el-icon-arrow-down el-icon--right"></i>
       </span>
@@ -25,11 +25,18 @@
 </template>
 
 <script>
+
 export default {
-  methods: {
+  computed: {
     getImgUrl() {
       return require(`../assets/img/flags/${this.$i18n.locale}.svg`);
-    },
+    }
+  },
+  methods: {
+    /* ...mapMutations(["updateCheckboxes", "updateDropdown"]),
+    handleCheckboxes() {
+      this.updateCheckboxes(this.checkboxes.filter(obj => obj.checked));
+    }, */
     setLocale(locale) {
       this.$i18n.locale = locale;
       this.$router.push({

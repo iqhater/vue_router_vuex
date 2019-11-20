@@ -20,11 +20,11 @@ export default {
   mutations: {
     updateStartDate(state, startDate) {
       state.booking.startDate = startDate;
+      localStorage.setItem("startDate", startDate);
     },
-    updateEndDate(state, days) {
-      const date = new Date();
-      date.setDate(date.getDate() + days);
-      state.booking.endDate = date;
+    updateEndDate(state, endDate) {
+      state.booking.endDate = endDate;
+      localStorage.setItem("endDate", endDate);
     },
     updateCheckboxes(state, checkboxes) {
       state.booking.checkboxes = checkboxes;

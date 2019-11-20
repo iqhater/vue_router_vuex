@@ -10,12 +10,12 @@
         v-model="checkbox.checked"
         size="medium"
         border
-        @change="handleCheckboxes()"
+        @change="handleCheckboxes"
       ></el-checkbox>
     </div>
 
     <h4>{{ $t("options.dropdown.title") }}:</h4>
-    <el-select v-model="value" placeholder="Select" @change="handleDropdownOption()">
+    <el-select v-model="value" placeholder="Select" @change="handleDropdownOption">
       <el-option
         v-for="(item, index) in options"
         :key="item.value"

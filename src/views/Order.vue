@@ -3,17 +3,17 @@
     <el-divider>{{ $t("order.booking.title") }}</el-divider>
     <h4>
       {{ $t("order.booking.startDate") }}
-      <span>10-11-2019</span>
+      <span>{{ startDate() }}</span>
     </h4>
     <h4>
       {{ $t("order.booking.endDate") }}
-      <span>15-11-2019</span>
+      <span>{{ endDate() }}</span>
     </h4>
     <h4>
       {{ $t("order.booking.selectedCheckboxes") }}
       <span v-for="checkmark in handleCheckboxes()" :key="checkmark.label">{{
         checkmark.label
-      }}</span>
+      }}, </span>
     </h4>
     <h4>
       {{ $t("order.booking.selectedOption") }}
@@ -77,16 +77,19 @@ export default {
   data() {
     return {
       centerDialogVisible: false,
-      checked: false
+      checked: false,
     };
   },
-  /* async mounted() {
-    console.log(this.bookingInfo.checkboxes);
-  }, */
   computed: {
-    ...mapGetters(["bookingInfo", "userInfo"])
+    ...mapGetters(["bookingInfo", "userInfo"]),
   },
   methods: {
+    startDate() {
+      return this.bookingInfo.startDate;
+    },
+    endDate() {
+      return this.bookingInfo.endDate;
+    }, 
     handleCheckboxes() {
       return this.bookingInfo.checkboxes;
     },
