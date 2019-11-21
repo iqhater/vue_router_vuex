@@ -56,7 +56,6 @@ export default {
   },
   data() {
     return {
-      // value1: [new Date(), new Date(2019, 11, 27, 10, 10)]
       dates: [new Date(), new Date().setDate(new Date().getDate() + 6)]
     };
   }
