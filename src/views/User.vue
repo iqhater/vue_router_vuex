@@ -78,7 +78,6 @@ export default {
     };
   },
   methods: {
-    // ...mapGetters(["userInfo"]),
     ...mapMutations(["updateFirstName", "updateLastName", "updateEmail"]),
     handleName() {
       this.updateFirstName(this.dynamicValidateForm.firstName);
