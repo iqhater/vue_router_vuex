@@ -3,15 +3,6 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import ElementUI from "element-ui";
-// import {
-//   Button,
-//   Select,
-//   Dropdown,
-//   DatePicker,
-//   Dialog,
-//   Checkbox,
-//   Input
-// } from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 // import locale from "element-ui/lib/locale";
 import en from "element-ui/lib/locale/lang/en";
@@ -24,14 +15,6 @@ Vue.use(ElementUI, {
   locale: en
   // i18n: (key, value) => i18n.t(key, value)
 });
-// Locale.i18n((key, value) => i18n.t(key, value));
-// Vue.use(Button);
-// Vue.use(Select);
-// Vue.use(Dropdown);
-// Vue.use(DatePicker);
-// Vue.use(Dialog);
-// Vue.use(Checkbox);
-// Vue.use(Input);
 Vue.config.productionTip = false;
 
 // use beforeEach route guard to set the language
