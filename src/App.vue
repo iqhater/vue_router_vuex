@@ -30,7 +30,7 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
+/* Menu navbar styles */
 #nav {
   padding: 30px;
 
