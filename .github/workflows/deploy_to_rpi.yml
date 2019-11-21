@@ -14,11 +14,11 @@ jobs:
       run: npm install && npm run build
       
     - name: Deploy via SCP
-      uses: horochx/deploy-via-scp@v1.0.1
+      uses: garygrossgarten/github-action-scp@release
       with:
         local: dist 
         remote: ${{ secrets.REMOTE_PATH }}
         host: ${{ secrets.HOST }} 
         port: ${{ secrets.PORT }} 
-        user: ${{ secrets.USER }} 
-        key: ${{ secrets.KEY }}
+        username: ${{ secrets.USER }} 
+        password: ${{ secrets.PASSWORD }}
