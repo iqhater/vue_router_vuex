@@ -110,10 +110,6 @@ export default {
       localStorage.clear();
     },
     successNotification() {
-      /* this.$notify({
-          title: 'Custom Position',
-          message: 'I\'m at the top right corner'
-        }); */
       this.$message({
         showClose: true,
         message: this.$t('order.success'),
