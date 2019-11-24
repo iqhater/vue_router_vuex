@@ -115,6 +115,7 @@
       }
     },
     "send": "Send order",
+    "loading": "Loading",
     "success": "Success! Thank you for order."
   },
   "findBar": {

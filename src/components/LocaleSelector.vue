@@ -1,6 +1,6 @@
 <template>
   <div class="locale">
-    <el-dropdown @command="setLocale">
+    <el-dropdown trigger="click" @command="setLocale">
       <span class="el-dropdown-link">
         <img :src="getImgUrl" alt="flag" class="flags" />
         <span>{{ $i18n.locale.toUpperCase() }}</span>

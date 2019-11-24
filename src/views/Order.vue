@@ -65,6 +65,7 @@
         successNotification();
         clearLocalStorage();
       "
+      :loading="loading"
       >{{ $t("order.send") }}</el-button
     >
   </div>
@@ -78,6 +79,7 @@ export default {
     return {
       centerDialogVisible: false,
       checked: false,
+      loading: false
     };
   },
   computed: {
@@ -110,12 +112,28 @@ export default {
       localStorage.clear();
     },
     successNotification() {
-      this.$message({
+
+      const loading = this.$loading({
+          lock: true,
+          text: this.$t('order.loading'),
+          spinner: 'el-icon-loading',
+          background: 'rgba(0, 0, 0, 0.7)'
+        });
+        setTimeout(() => {
+          loading.close();
+        }, 2000);
+
+      setTimeout(() => {
+        this.loading = false
+        this.$message({
         showClose: true,
         message: this.$t('order.success'),
         type: "success",
         duration: 4000
       });
+      this.checked = false
+      },2000);
+      this.loading = true
     }
   }
 };
