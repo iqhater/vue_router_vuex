@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 
 export default {
   data() {
@@ -78,7 +78,23 @@ export default {
     };
   },
   methods: {
+    ...mapGetters(["userInfo"]),
     ...mapMutations(["updateFirstName", "updateLastName", "updateEmail"]),
+    initName() {
+      if (this.userInfo().firstName != "") {
+        this.dynamicValidateForm.firstName = this.userInfo().firstName; 
+      }
+    },
+    initSurName() {
+      if (this.userInfo().lastName != "") {
+        this.dynamicValidateForm.lastName = this.userInfo().lastName; 
+      }
+    },
+    initEmail() {
+      if (this.userInfo().email != "") {
+        this.dynamicValidateForm.email = this.userInfo().email; 
+      }
+    },
     handleName() {
       this.updateFirstName(this.dynamicValidateForm.firstName);
     },
@@ -90,7 +106,17 @@ export default {
     },
     resetForm(formName) {
       this.$refs[formName].resetFields();
+
+      // clear user info from state
+      this.updateFirstName(this.dynamicValidateForm.firstName);
+      this.updateLastName(this.dynamicValidateForm.lastName);
+      this.updateEmail(this.dynamicValidateForm.email);
     }
+  },
+  async mounted() {
+    this.initName();
+    this.initSurName();
+    this.initEmail();
   }
 };
 </script>

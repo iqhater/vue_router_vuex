@@ -38,19 +38,23 @@ export default {
       checkboxes: [
         {
           label: this.$t("options.checkboxes.label1"),
-          checked: true
+          checked: false,
+          idx: 0
         },
         {
           label: this.$t("options.checkboxes.label2"),
-          checked: false
+          checked: false,
+          idx: 1
         },
         {
           label: this.$t("options.checkboxes.label3"),
-          checked: false
+          checked: false,
+          idx: 2
         },
         {
           label: this.$t("options.checkboxes.label4"),
-          checked: false
+          checked: false,
+          idx: 3
         }
       ],
       options: [
@@ -82,6 +86,21 @@ export default {
   methods: {
     ...mapGetters(["bookingInfo"]),
     ...mapMutations(["updateCheckboxes", "updateDropdown"]),
+    initCheckboxes() {
+      // console.log(this.bookingInfo().checkboxes.length);
+      if (this.bookingInfo().checkboxes.length > 0) {
+        this.checkboxes.forEach(() => {
+              this.bookingInfo().checkboxes.forEach(checkbox2 => {
+                  this.checkboxes[checkbox2.idx].checked = checkbox2.checked;
+              });
+        });
+      } 
+    },
+    initDropdown() {    
+      if (this.bookingInfo().dropdown != "") {
+          this.value = this.bookingInfo().dropdown;
+      } 
+    },
     handleCheckboxes() {
       this.updateCheckboxes(this.checkboxes.filter(obj => obj.checked));
     },
@@ -90,6 +109,8 @@ export default {
     }
   },
   async mounted() {
+    this.initCheckboxes();
+    this.initDropdown();
     this.handleCheckboxes();
     this.handleDropdownOption();
   },
