@@ -11,9 +11,9 @@
     </h4>
     <h4>
       {{ $t("order.booking.selectedCheckboxes") }}
-      <span v-for="checkmark in handleCheckboxes()" :key="checkmark.label">{{
-        checkmark.label
-      }}, </span>
+      <span v-for="checkmark in handleCheckboxes()" :key="checkmark.label"
+        >{{ checkmark.label }},
+      </span>
     </h4>
     <h4>
       {{ $t("order.booking.selectedOption") }}
@@ -36,24 +36,23 @@
     <el-checkbox v-model="checked">
       <i
         >{{ $t("order.terms.title") }}
-        <a href="#" type="text" @click="centerDialogVisible = true"
-          >{{ $t("order.terms.link") }}</a
+        <a href="#" type="text" @click="centerDialogVisible = true">{{
+          $t("order.terms.link")
+        }}</a
         >.</i
       >
     </el-checkbox>
     <el-dialog
-      :title='$t("order.terms.modal.title")'
+      :title="$t('order.terms.modal.title')"
       :visible.sync="centerDialogVisible"
       width="30%"
       center
     >
-      <span
-        >{{ $t("order.terms.modal.description") }}</span
-      >
+      <span>{{ $t("order.terms.modal.description") }}</span>
       <span slot="footer" class="dialog-footer">
-        <el-button type="info" plain @click="centerDialogVisible = false"
-          >{{ $t("order.terms.modal.cancel") }}</el-button
-        >
+        <el-button type="info" plain @click="centerDialogVisible = false">{{
+          $t("order.terms.modal.cancel")
+        }}</el-button>
       </span>
     </el-dialog>
     <el-button
@@ -83,7 +82,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["bookingInfo", "userInfo"]),
+    ...mapGetters(["bookingInfo", "userInfo"])
   },
   methods: {
     startDate() {
@@ -91,7 +90,7 @@ export default {
     },
     endDate() {
       return this.bookingInfo.endDate;
-    }, 
+    },
     handleCheckboxes() {
       return this.bookingInfo.checkboxes;
     },
@@ -112,28 +111,27 @@ export default {
       localStorage.clear();
     },
     successNotification() {
-
       const loading = this.$loading({
-          lock: true,
-          text: this.$t('order.loading'),
-          spinner: 'el-icon-loading',
-          background: 'rgba(0, 0, 0, 0.7)'
-        });
-        setTimeout(() => {
-          loading.close();
-        }, 2000);
+        lock: true,
+        text: this.$t("order.loading"),
+        spinner: "el-icon-loading",
+        background: "rgba(0, 0, 0, 0.7)"
+      });
+      setTimeout(() => {
+        loading.close();
+      }, 2000);
 
       setTimeout(() => {
-        this.loading = false
+        this.loading = false;
         this.$message({
-        showClose: true,
-        message: this.$t('order.success'),
-        type: "success",
-        duration: 4000
-      });
-      this.checked = false
-      },2000);
-      this.loading = true
+          showClose: true,
+          message: this.$t("order.success"),
+          type: "success",
+          duration: 4000
+        });
+        this.checked = false;
+      }, 2000);
+      this.loading = true;
     }
   }
 };

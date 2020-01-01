@@ -15,7 +15,11 @@
     </div>
 
     <h4>{{ $t("options.dropdown.title") }}:</h4>
-    <el-select v-model="value" placeholder="Select" @change="handleDropdownOption">
+    <el-select
+      v-model="value"
+      placeholder="Select"
+      @change="handleDropdownOption"
+    >
       <el-option
         v-for="(item, index) in options"
         :key="item.value"
@@ -87,19 +91,18 @@ export default {
     ...mapGetters(["bookingInfo"]),
     ...mapMutations(["updateCheckboxes", "updateDropdown"]),
     initCheckboxes() {
-      // console.log(this.bookingInfo().checkboxes.length);
       if (this.bookingInfo().checkboxes.length > 0) {
         this.checkboxes.forEach(() => {
-              this.bookingInfo().checkboxes.forEach(checkbox2 => {
-                  this.checkboxes[checkbox2.idx].checked = checkbox2.checked;
-              });
+          this.bookingInfo().checkboxes.forEach(checkbox2 => {
+            this.checkboxes[checkbox2.idx].checked = checkbox2.checked;
+          });
         });
-      } 
+      }
     },
-    initDropdown() {    
+    initDropdown() {
       if (this.bookingInfo().dropdown != "") {
-          this.value = this.bookingInfo().dropdown;
-      } 
+        this.value = this.bookingInfo().dropdown;
+      }
     },
     handleCheckboxes() {
       this.updateCheckboxes(this.checkboxes.filter(obj => obj.checked));

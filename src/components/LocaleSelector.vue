@@ -8,16 +8,32 @@
       </span>
       <el-dropdown-menu slot="dropdown">
         <el-dropdown-item command="en">
-          <img src="../assets/img/flags/en.svg" alt="flag_icon_en" class="flags" />English
+          <img
+            src="../assets/img/flags/en.svg"
+            alt="flag_icon_en"
+            class="flags"
+          />English
         </el-dropdown-item>
         <el-dropdown-item command="ru">
-          <img src="../assets/img/flags/ru.svg" alt="flag_icon_ru" class="flags" />Русский
+          <img
+            src="../assets/img/flags/ru.svg"
+            alt="flag_icon_ru"
+            class="flags"
+          />Русский
         </el-dropdown-item>
         <el-dropdown-item command="es">
-          <img src="../assets/img/flags/es.svg" alt="flag_icon_es" class="flags" />Español
+          <img
+            src="../assets/img/flags/es.svg"
+            alt="flag_icon_es"
+            class="flags"
+          />Español
         </el-dropdown-item>
         <el-dropdown-item command="de">
-          <img src="../assets/img/flags/de.svg" alt="flag_icon_de" class="flags" />Deutsch
+          <img
+            src="../assets/img/flags/de.svg"
+            alt="flag_icon_de"
+            class="flags"
+          />Deutsch
         </el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
@@ -25,7 +41,6 @@
 </template>
 
 <script>
-
 export default {
   computed: {
     getImgUrl() {
