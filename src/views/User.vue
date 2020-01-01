@@ -8,7 +8,7 @@
       class="demo-dynamic"
     >
       <el-form-item
-        :label='$t("user.firstName.title")'
+        :label="$t('user.firstName.title')"
         prop="firstName"
         :rules="[
           {
@@ -30,7 +30,7 @@
           @change="handleName()"
         ></el-input>
       </el-form-item>
-      <el-form-item :label='$t("user.lastName")' prop="lastName">
+      <el-form-item :label="$t('user.lastName')" prop="lastName">
         <el-input
           v-model="dynamicValidateForm.lastName"
           @change="handleSurName()"
@@ -38,7 +38,7 @@
       </el-form-item>
       <el-form-item
         prop="email"
-        :label='$t("user.email.title")'
+        :label="$t('user.email.title')"
         :rules="[
           {
             required: true,
@@ -58,7 +58,9 @@
         ></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button @click="resetForm('dynamicValidateForm')">{{ $t("user.reset") }}</el-button>
+        <el-button @click="resetForm('dynamicValidateForm')">{{
+          $t("user.reset")
+        }}</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -82,17 +84,17 @@ export default {
     ...mapMutations(["updateFirstName", "updateLastName", "updateEmail"]),
     initName() {
       if (this.userInfo().firstName != "") {
-        this.dynamicValidateForm.firstName = this.userInfo().firstName; 
+        this.dynamicValidateForm.firstName = this.userInfo().firstName;
       }
     },
     initSurName() {
       if (this.userInfo().lastName != "") {
-        this.dynamicValidateForm.lastName = this.userInfo().lastName; 
+        this.dynamicValidateForm.lastName = this.userInfo().lastName;
       }
     },
     initEmail() {
       if (this.userInfo().email != "") {
-        this.dynamicValidateForm.email = this.userInfo().email; 
+        this.dynamicValidateForm.email = this.userInfo().email;
       }
     },
     handleName() {

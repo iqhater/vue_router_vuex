@@ -7,5 +7,6 @@ module.exports = {
       localeDir: "locales",
       enableInSFC: false
     }
-  }
+  },
+  productionSourceMap: false
 };

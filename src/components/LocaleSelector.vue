@@ -53,6 +53,7 @@ export default {
       this.updateCheckboxes(this.checkboxes.filter(obj => obj.checked));
     }, */
     setLocale(locale) {
+      if (locale === this.$i18n.locale) return;
       this.$i18n.locale = locale;
       this.$router.push({
         params: { lang: locale }
