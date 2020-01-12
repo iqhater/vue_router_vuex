@@ -9,6 +9,7 @@
         :start-placeholder="$t('findBar.start')"
         :end-placeholder="$t('findBar.end')"
         @change="handleDates"
+        format="dd.MM.yyyy HH:mm"
       ></el-date-picker>
     </div>
   </div>
@@ -26,15 +27,15 @@ export default {
   methods: {
     ...mapMutations(["updateStartDate", "updateEndDate"]),
     handleDates() {
-      // value-format="d-MM-yyyy" attribute in el-date-picker
-      const startDate = `${this.dates[0].getDate()}-${(
+      // format="dd-MM-yyyy HH:mm" attribute in el-date-picker        
+      const startDate = `${this.dates[0].getDate()}.${(
         "0" +
         (this.dates[0].getMonth() + 1)
-      ).slice(-2)}-${this.dates[0].getFullYear()}`;
-      const endDate = `${this.dates[1].getDate()}-${(
+      ).slice(-2)}.${this.dates[0].getFullYear()}`;
+      const endDate = `${this.dates[1].getDate()}.${(
         "0" +
         (this.dates[1].getMonth() + 1)
-      ).slice(-2)}-${this.dates[1].getFullYear()}`;
+      ).slice(-2)}.${this.dates[1].getFullYear()}`;
 
       this.updateStartDate(startDate);
       this.updateEndDate(endDate);

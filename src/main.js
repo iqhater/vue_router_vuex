@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import {
+  Alert,
   Dialog,
   Dropdown,
   DropdownMenu,
@@ -31,6 +32,7 @@ import en from "element-ui/lib/locale/lang/en";
 // import de from "element-ui/lib/locale/lang/de";
 import i18n from "./i18n";
 
+Vue.use(Alert);
 Vue.use(Dialog);
 Vue.use(Dropdown);
 Vue.use(DropdownMenu);
