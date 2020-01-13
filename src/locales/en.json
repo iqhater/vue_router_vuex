@@ -123,5 +123,8 @@
     "separator": "To",
     "start": "Start date",
     "end": "End date"
+  },
+  "404": {
+    "title": "PAGE NOT FOUND."
   }
 }

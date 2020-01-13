@@ -3,7 +3,7 @@
     <el-alert
       title="404"
       type="error"
-      description="PAGE NOT FOUND."
+      :description="$t('404.title')"
       :closable="false"
       center
     ></el-alert>
