@@ -68,6 +68,11 @@ export default {
   display: inline;
   position: relative;
   left: 90px;
+
+  @media (max-width: 599px) {
+    top: -198px;
+    left: 100px;
+  }
 }
 .flags {
   vertical-align: middle;

@@ -47,5 +47,9 @@ export default {
     font-size: 1.1em;
     margin-left: 10px;
   }
+
+  @media (max-width: 599px) {
+    width: 100%;
+  }
 }
 </style>

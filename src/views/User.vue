@@ -127,5 +127,13 @@ export default {
 .user {
   margin: 0 auto;
   width: 40%;
+
+  @media (max-width: 599px) {
+    width: 100%;
+
+    el-form[label-position="top"] {
+      width: 0;
+    }
+  }
 }
 </style>

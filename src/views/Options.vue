@@ -125,7 +125,14 @@ export default {
 
 <style scoped lang="scss">
 .checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 30px;
+
+  .el-checkbox {
+    margin: 5px;
+  }
 }
 
 h4 {

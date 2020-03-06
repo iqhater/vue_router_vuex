@@ -45,7 +45,7 @@
     <el-dialog
       :title="$t('order.terms.modal.title')"
       :visible.sync="centerDialogVisible"
-      width="30%"
+      width="90%"
       center
     >
       <span>{{ $t("order.terms.modal.description") }}</span>
@@ -157,6 +157,10 @@ export default {
   #send-btn {
     display: block;
     margin: 30px auto;
+  }
+
+  @media (max-width: 599px) {
+    width: 100%;
   }
 }
 </style>

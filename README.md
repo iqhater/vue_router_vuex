@@ -1,3 +1,5 @@
+![Deploy to Raspberry Pi](https://github.com/iqhater/vue_router_vuex/workflows/Deploy%20to%20Raspberry%20Pi/badge.svg?branch=master)
+
 # vue_router_vuex_test
 
 ## Project setup
