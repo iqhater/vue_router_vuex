@@ -4,7 +4,7 @@ on:
     branches:
       - master
 jobs:
-  build-and-deploy:
+  install-and-build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -16,7 +16,11 @@ jobs:
         npm run build --if-present
       env: 
         CI: true
-      
+        
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [install-and-build]
+    steps:
     - name: Deploy via SCP
       uses: garygrossgarten/github-action-scp@release
       with:
