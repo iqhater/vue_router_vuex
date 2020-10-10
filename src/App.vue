@@ -1,21 +1,20 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link :to="`/${$i18n.locale}`">{{ $t("nav.home") }}</router-link>
-      |
-      <router-link :to="`/${$i18n.locale}/options`">
-        {{ $t("nav.options") }}
-      </router-link>
-      |
-      <router-link :to="`/${$i18n.locale}/user`">{{
-        $t("nav.user")
+      <router-link :to="`/${$i18n.locale}`">{{ $t("nav.home") }}</router-link
+      >|
+      <router-link :to="`/${$i18n.locale}/options`">{{
+        $t("nav.options")
       }}</router-link
+      >|
+      <router-link :to="`/${$i18n.locale}/user`">
+        {{ $t("nav.user") }} </router-link
       >|
       <router-link :to="`/${$i18n.locale}/faq`">{{ $t("nav.faq") }}</router-link
       >|
-      <router-link :to="`/${$i18n.locale}/order`">{{
-        $t("nav.order")
-      }}</router-link>
+      <router-link :to="`/${$i18n.locale}/order`">
+        {{ $t("nav.order") }}
+      </router-link>
       <LocaleSelector />
     </div>
     <router-view />
@@ -27,8 +26,8 @@ import LocaleSelector from "@/components/LocaleSelector.vue";
 
 export default {
   components: {
-    LocaleSelector
-  }
+    LocaleSelector,
+  },
 };
 </script>
 
