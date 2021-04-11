@@ -11,7 +11,7 @@ import FindBar from "@/components/FindBar.vue";
 export default {
   name: "home",
   components: {
-    FindBar
-  }
+    FindBar,
+  },
 };
 </script>

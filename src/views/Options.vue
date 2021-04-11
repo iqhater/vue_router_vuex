@@ -15,7 +15,11 @@
     </div>
 
     <h4>{{ $t("options.dropdown.title") }}:</h4>
-    <el-select v-model="value" placeholder="Select" @change="handleDropdownOption">
+    <el-select
+      v-model="value"
+      placeholder="Select"
+      @change="handleDropdownOption"
+    >
       <el-option
         v-for="(item, index) in options"
         :key="item.value"
@@ -39,48 +43,48 @@ export default {
         {
           label: this.$t("options.checkboxes.label1"),
           checked: false,
-          idx: 0
+          idx: 0,
         },
         {
           label: this.$t("options.checkboxes.label2"),
           checked: false,
-          idx: 1
+          idx: 1,
         },
         {
           label: this.$t("options.checkboxes.label3"),
           checked: false,
-          idx: 2
+          idx: 2,
         },
         {
           label: this.$t("options.checkboxes.label4"),
           checked: false,
-          idx: 3
-        }
+          idx: 3,
+        },
       ],
       options: [
         {
           value: this.$t("options.dropdown.option1.value"),
-          label: this.$t("options.dropdown.option1.label")
+          label: this.$t("options.dropdown.option1.label"),
         },
         {
           value: this.$t("options.dropdown.option2.value"),
           label: this.$t("options.dropdown.option2.label"),
-          disabled: true
+          disabled: true,
         },
         {
           value: this.$t("options.dropdown.option3.value"),
-          label: this.$t("options.dropdown.option3.label")
+          label: this.$t("options.dropdown.option3.label"),
         },
         {
           value: this.$t("options.dropdown.option4.value"),
-          label: this.$t("options.dropdown.option4.label")
+          label: this.$t("options.dropdown.option4.label"),
         },
         {
           value: this.$t("options.dropdown.option5.value"),
-          label: this.$t("options.dropdown.option5.label")
-        }
+          label: this.$t("options.dropdown.option5.label"),
+        },
       ],
-      value: this.$t("options.dropdown.option1.value")
+      value: this.$t("options.dropdown.option1.value"),
     };
   },
   methods: {
@@ -89,7 +93,7 @@ export default {
     initCheckboxes() {
       if (this.bookingInfo().checkboxes.length > 0) {
         this.checkboxes.forEach(() => {
-          this.bookingInfo().checkboxes.forEach(checkbox2 => {
+          this.bookingInfo().checkboxes.forEach((checkbox2) => {
             this.checkboxes[checkbox2.idx].checked = checkbox2.checked;
           });
         });
@@ -101,11 +105,11 @@ export default {
       }
     },
     handleCheckboxes() {
-      this.updateCheckboxes(this.checkboxes.filter(obj => obj.checked));
+      this.updateCheckboxes(this.checkboxes.filter((obj) => obj.checked));
     },
     handleDropdownOption() {
       this.updateDropdown(this.value);
-    }
+    },
   },
   async mounted() {
     this.initCheckboxes();
@@ -114,8 +118,8 @@ export default {
     this.handleDropdownOption();
   },
   components: {
-    FindBar
-  }
+    FindBar,
+  },
 };
 </script>
 

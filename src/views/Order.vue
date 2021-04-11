@@ -44,12 +44,12 @@
     </el-checkbox>
     <el-dialog
       :title="$t('order.terms.modal.title')"
-      :visible.sync="centerDialogVisible"
+      :visible="centerDialogVisible"
       width="90%"
       center
     >
       <span>{{ $t("order.terms.modal.description") }}</span>
-      <span slot="footer" class="dialog-footer">
+      <span slot:="footer" class="dialog-footer">
         <el-button type="info" plain @click="centerDialogVisible = false">{{
           $t("order.terms.modal.cancel")
         }}</el-button>
@@ -78,11 +78,11 @@ export default {
     return {
       centerDialogVisible: false,
       checked: false,
-      loading: false
+      loading: false,
     };
   },
   computed: {
-    ...mapGetters(["bookingInfo", "userInfo"])
+    ...mapGetters(["bookingInfo", "userInfo"]),
   },
   methods: {
     startDate() {
@@ -115,7 +115,7 @@ export default {
         lock: true,
         text: this.$t("order.loading"),
         spinner: "el-icon-loading",
-        background: "rgba(0, 0, 0, 0.7)"
+        background: "rgba(0, 0, 0, 0.7)",
       });
       setTimeout(() => {
         loading.close();
@@ -127,13 +127,13 @@ export default {
           showClose: true,
           message: this.$t("order.success"),
           type: "success",
-          duration: 4000
+          duration: 4000,
         });
         this.checked = false;
       }, 2000);
       this.loading = true;
-    }
-  }
+    },
+  },
 };
 </script>
 

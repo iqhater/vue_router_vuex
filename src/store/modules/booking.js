@@ -4,19 +4,10 @@ export default {
       startDate: "",
       endDate: "",
       checkboxes: [],
-      dropdown: ""
-    }
+      dropdown: "",
+    },
   },
-  actions: {
-    /* initStartDate(ctx) {
-              ctx.commit("updateStartDate", new Date());
-            },
-            initEndDate(ctx, days) {
-              const date = this.initStartDate(ctx);
-              date.setDate(date.getDate() + days);
-              ctx.commit("updateEndDate", date);
-            } */
-  },
+  actions: {},
   mutations: {
     updateStartDate(state, startDate) {
       state.booking.startDate = startDate;
@@ -31,11 +22,11 @@ export default {
     },
     updateDropdown(state, option) {
       state.booking.dropdown = option;
-    }
+    },
   },
   getters: {
     bookingInfo(state) {
       return state.booking;
-    }
-  }
+    },
+  },
 };

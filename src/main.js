@@ -1,67 +1,17 @@
-import Vue from "vue";
-import App from "./App.vue";
+import Vue, { createApp } from "vue";
+import Root from "./App.vue";
 import router from "./router";
 import store from "./store";
-import {
-  Alert,
-  Dialog,
-  Dropdown,
-  DropdownMenu,
-  DropdownItem,
-  Input,
-  Checkbox,
-  Select,
-  Option,
-  Button,
-  DatePicker,
-  Form,
-  FormItem,
-  Collapse,
-  CollapseItem,
-  Container,
-  Divider,
-  Loading,
-  Message
-} from "element-ui";
-// import ElementUI from "element-ui";
-import "element-ui/lib/theme-chalk/index.css";
-import locale from "element-ui/lib/locale";
-import en from "element-ui/lib/locale/lang/en";
-// import ru from "element-ui/lib/locale/lang/ru-RU";
-// import es from "element-ui/lib/locale/lang/es";
-// import de from "element-ui/lib/locale/lang/de";
+// import { ElLoading, ElMessage } from "element-plus";
+import ElementPlus from "element-plus";
+import "element-plus/lib/theme-chalk/index.css";
+
+import locale from "element-plus/lib/locale";
+import en from "element-plus/lib/locale/lang/en";
 import i18n from "./i18n";
-
-Vue.use(Alert);
-Vue.use(Dialog);
-Vue.use(Dropdown);
-Vue.use(DropdownMenu);
-Vue.use(DropdownItem);
-Vue.use(Input);
-Vue.use(Checkbox);
-Vue.use(Select);
-Vue.use(Option);
-Vue.use(Button);
-Vue.use(DatePicker);
-Vue.use(Form);
-Vue.use(FormItem);
-Vue.use(Collapse);
-Vue.use(CollapseItem);
-Vue.use(Container);
-Vue.use(Divider);
-
-Vue.use(Loading.directive);
 locale.use(en);
-// locale.i18n((key, value) => i18n.t(key, value));
 
-Vue.prototype.$loading = Loading.service;
-Vue.prototype.$message = Message;
-
-// Vue.use(DatePicker, {
-//   locale: ru
-//   // i18n: (key, value) => i18n.t(key, value)
-// });
-Vue.config.productionTip = false;
+// Vue.config.productionTip = false;
 
 // use beforeEach route guard to set the language
 router.beforeEach((to, from, next) => {
@@ -77,9 +27,17 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-new Vue({
+createApp(Root)
+  .use(router)
+  .use(store)
+  .use(i18n)
+  // .use(ElMessage)
+  // .use(ElLoading)
+  .use(ElementPlus)
+  .mount("#app");
+/* new Vue({
   router,
   store,
   i18n,
-  render: h => h(App)
-}).$mount("#app");
+  render: (h) => h(App),
+}).mount("#app"); */

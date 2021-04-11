@@ -33,7 +33,7 @@ import { mapGetters, mapMutations } from "vuex";
 export default {
   data() {
     return {
-      activeNames: [2]
+      activeNames: [2],
     };
   },
   methods: {
@@ -46,12 +46,12 @@ export default {
     },
     handleTabs() {
       this.updateTabs(this.activeNames);
-    }
+    },
   },
   async mounted() {
     this.initTabs();
     this.handleTabs(this.activeNames);
-  }
+  },
 };
 </script>
 

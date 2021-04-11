@@ -6,7 +6,7 @@
         <span>{{ $i18n.locale.toUpperCase() }}</span>
         <i class="el-icon-arrow-down el-icon--right"></i>
       </span>
-      <el-dropdown-menu slot="dropdown">
+      <el-dropdown-menu slot:="dropdown">
         <el-dropdown-item command="en">
           <img
             src="../assets/img/flags/en.svg"
@@ -45,21 +45,17 @@ export default {
   computed: {
     getImgUrl() {
       return require(`../assets/img/flags/${this.$i18n.locale}.svg`);
-    }
+    },
   },
   methods: {
-    /* ...mapMutations(["updateCheckboxes", "updateDropdown"]),
-    handleCheckboxes() {
-      this.updateCheckboxes(this.checkboxes.filter(obj => obj.checked));
-    }, */
     setLocale(locale) {
       if (locale === this.$i18n.locale) return;
       this.$i18n.locale = locale;
       this.$router.push({
-        params: { lang: locale }
+        params: { lang: locale },
       });
-    }
-  }
+    },
+  },
 };
 </script>
 

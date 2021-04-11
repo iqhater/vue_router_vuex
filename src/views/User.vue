@@ -14,14 +14,14 @@
           {
             required: true,
             message: `${$t('user.firstName.error1')}`,
-            trigger: 'blur'
+            trigger: 'blur',
           },
           {
             min: 2,
             max: 18,
             message: `${$t('user.firstName.error2')}`,
-            trigger: 'blur'
-          }
+            trigger: 'blur',
+          },
         ]"
       >
         <el-input
@@ -43,13 +43,13 @@
           {
             required: true,
             message: `${$t('user.email.error1')}`,
-            trigger: 'blur'
+            trigger: 'blur',
           },
           {
             type: 'email',
             message: `${$t('user.email.error2')}`,
-            trigger: ['blur', 'change']
-          }
+            trigger: ['blur', 'change'],
+          },
         ]"
       >
         <el-input
@@ -75,8 +75,8 @@ export default {
       dynamicValidateForm: {
         firstName: "",
         lastName: "",
-        email: ""
-      }
+        email: "",
+      },
     };
   },
   methods: {
@@ -113,13 +113,13 @@ export default {
       this.updateFirstName(this.dynamicValidateForm.firstName);
       this.updateLastName(this.dynamicValidateForm.lastName);
       this.updateEmail(this.dynamicValidateForm.email);
-    }
+    },
   },
   async mounted() {
     this.initName();
     this.initSurName();
     this.initEmail();
-  }
+  },
 };
 </script>
 

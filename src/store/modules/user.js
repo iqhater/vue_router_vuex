@@ -3,8 +3,8 @@ export default {
     user: {
       firstName: "",
       lastName: "",
-      email: ""
-    }
+      email: "",
+    },
   },
   actions: {},
   mutations: {
@@ -16,11 +16,11 @@ export default {
     },
     updateEmail(state, email) {
       state.user.email = email;
-    }
+    },
   },
   getters: {
     userInfo(state) {
       return state.user;
-    }
-  }
+    },
+  },
 };

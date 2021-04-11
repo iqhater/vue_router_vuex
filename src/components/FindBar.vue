@@ -21,13 +21,13 @@ import { mapGetters, mapMutations } from "vuex";
 export default {
   name: "FindBar",
   props: {
-    msg: String
+    msg: String,
   },
   computed: mapGetters(["bookingInfo"]),
   methods: {
     ...mapMutations(["updateStartDate", "updateEndDate"]),
     handleDates() {
-      // format="dd-MM-yyyy HH:mm" attribute in el-date-picker        
+      // format="dd-MM-yyyy HH:mm" attribute in el-date-picker
       const startDate = `${this.dates[0].getDate()}.${(
         "0" +
         (this.dates[0].getMonth() + 1)
@@ -39,7 +39,7 @@ export default {
 
       this.updateStartDate(startDate);
       this.updateEndDate(endDate);
-    }
+    },
   },
   async mounted() {
     // init stored dates
@@ -63,9 +63,9 @@ export default {
   },
   data() {
     return {
-      dates: [new Date(), new Date().setDate(new Date().getDate() + 6)]
+      dates: [new Date(), new Date().setDate(new Date().getDate() + 6)],
     };
-  }
+  },
 };
 </script>
 
