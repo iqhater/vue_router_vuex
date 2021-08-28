@@ -9,7 +9,7 @@ specifiers:
   element-plus: ^1.1.0-beta.7
   es6-promise: ^4.2.8
   regenerator-runtime: ^0.13.9
-  sass: ^1.38.1
+  sass: ^1.38.2
   sass-loader: ^12.1.0
   vite: ^2.5.1
   vite-plugin-element-plus: ^0.0.12
@@ -21,7 +21,6 @@ specifiers:
   vuex: ^4.0.0
 
 dependencies:
-  core-js: 3.16.3
   element-plus: 1.1.0-beta.7_vue@3.2.6
   es6-promise: 4.2.8
   vue: 3.2.6
@@ -34,9 +33,10 @@ devDependencies:
   '@intlify/vue-i18n-loader': 3.0.0_vue@3.2.6
   '@vitejs/plugin-vue': 1.6.0_@vue+compiler-sfc@3.2.6
   '@vue/compiler-sfc': 3.2.6
+  core-js: 3.16.3
   regenerator-runtime: 0.13.9
-  sass: 1.38.1
-  sass-loader: 12.1.0_sass@1.38.1
+  sass: 1.38.2
+  sass-loader: 12.1.0_sass@1.38.2
   vite: 2.5.1
   vite-plugin-element-plus: 0.0.12_vite@2.5.1
   vite-plugin-style-import: 1.2.1_vite@2.5.1
@@ -500,7 +500,7 @@ packages:
   /core-js/3.16.3:
     resolution: {integrity: sha512-lM3GftxzHNtPNUJg0v4pC2RC6puwMd6VZA7vXUczi+SKmCWSf4JwO89VJGMqbzmB7jlK7B5hr3S64PqwFL49cA==}
     requiresBuild: true
-    dev: false
+    dev: true
 
   /cssesc/3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
@@ -1158,7 +1158,7 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
-  /sass-loader/12.1.0_sass@1.38.1:
+  /sass-loader/12.1.0_sass@1.38.2:
     resolution: {integrity: sha512-FVJZ9kxVRYNZTIe2xhw93n3xJNYZADr+q69/s98l9nTCrWASo+DR2Ot0s5xTKQDDEosUkatsGeHxcH4QBp5bSg==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
@@ -1176,11 +1176,11 @@ packages:
     dependencies:
       klona: 2.0.4
       neo-async: 2.6.2
-      sass: 1.38.1
+      sass: 1.38.2
     dev: true
 
-  /sass/1.38.1:
-    resolution: {integrity: sha512-Lj8nPaSYOuRhgqdyShV50fY5jKnvaRmikUNalMPmbH+tKMGgEKVkltI/lP30PEfO2T1t6R9yc2QIBLgOc3uaFw==}
+  /sass/1.38.2:
+    resolution: {integrity: sha512-Bz1fG6qiyF0FX6m/I+VxtdVKz1Dfmg/e9kfDy2PhWOkq3T384q2KxwIfP0fXpeI+EyyETdOauH+cRHQDFASllA==}
     engines: {node: '>=8.9.0'}
     hasBin: true
     dependencies:

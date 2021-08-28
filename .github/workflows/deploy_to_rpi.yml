@@ -28,8 +28,11 @@ jobs:
       - name: Install pnpm
         run: curl -f https://get.pnpm.io/v6.7.js | node - add --global pnpm@6
 
-      - name: pnpm Build
+      - name: pnpm Install
         run: pnpm install
+
+      - name: pnpm Build
+        run: pnpm build
 
       - name: Deploy via SCP
         uses: garygrossgarten/github-action-scp@release
