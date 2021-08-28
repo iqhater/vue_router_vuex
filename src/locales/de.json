@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "home": "Zu Hause",
+    "options": "Optionen",
+    "user": "Benutzerinfo",
+    "faq": "FAQ",
+    "order": "Bestellen"
+  },
+  "options": {
+    "checkboxes": {
+      "label1": "Option 1",
+      "label2": "Option 2",
+      "label3": "Option 3",
+      "label4": "Option 4"
+    },
+    "dropdown": {
+      "title": "Option auswählen",
+      "option1": {
+        "value": "Eins",
+        "label": "Eins 1"
+      },
+      "option2": {
+        "value": "Zwei",
+        "label": "Zwei 2"
+      },
+      "option3": {
+        "value": "Drei",
+        "label": "Drei 3"
+      },
+      "option4": {
+        "value": "Vier",
+        "label": "Vier 4"
+      },
+      "option5": {
+        "value": "Fünf",
+        "label": "Fünf 5"
+      }
+    }
+  },
+  "user": {
+    "title": "Benutzerinfo",
+    "firstName": {
+      "title": "Vorname",
+      "error1": "Bitte korrekten Vornamen eingeben",
+      "error2": "Die Länge sollte 2 bis 18 betragen"
+    },
+    "lastName": "Nachname",
+    "email": {
+      "title": "Email",
+      "error1": "Bitte E-Mail-Adresse eingeben",
+      "error2": "Bitte geben Sie die richtige E-Mail-Adresse ein"
+    },
+    "reset": "Zurücksetzen"
+  },
+  "faq": {
+    "section1": {
+      "title": "Konsistenz",
+      "description": {
+        "block1": "Im Einklang mit dem wirklichen Leben: im Einklang mit dem Prozess und der Logik des wirklichen Lebens und entsprechen den Sprachen und Gewohnheiten, an die die Benutzer gewöhnt sind.",
+        "block2": "Konsistent innerhalb der Benutzeroberfläche: Alle Elemente sollten konsistent sein, wie z. B.: Designstil, Symbole und Texte, Position der Elemente usw."
+      }
+    },
+    "section2": {
+      "title": "Feedback",
+      "description": {
+        "block1": "Operationsfeedback: ermöglichen den Benutzern, ihre Operationen durch Stilaktualisierungen und interaktive Effekte klar wahrzunehmen.",
+        "block2": "Visuelles Feedback: spiegeln den aktuellen Zustand durch Aktualisieren oder Neuanordnen von Elementen der Seite wider."
+      }
+    },
+    "section3": {
+      "title": "Effizienz",
+      "description": {
+        "block1": "Vereinfachen Sie den Prozess: Halten Sie den Bedienungsprozess einfach und intuitiv.",
+        "block2": "Eindeutig und klar: Formulieren Sie Ihre Absichten klar aus, damit die Benutzer schnell verstehen und Entscheidungen treffen können.",
+        "block3": "Einfach zu identifizieren: Die Benutzeroberfläche sollte einfach sein, was den Benutzern bei der Identifizierung hilft und sie vom Auswendiglernen und Abrufen befreit."
+      }
+    },
+    "section4": {
+      "title": "Kontrollierbarkeit",
+      "description": {
+        "block1": "Entscheidungsfindung: Ratschläge zu Operationen zu geben ist akzeptabel, aber trifft keine Entscheidungen für die Benutzer.",
+        "block2": "Kontrollierte Konsequenzen: Benutzern sollte die Freiheit zum Betrieb eingeräumt werden, einschließlich des Abbruchs, des Abbruchs oder der Beendigung des laufenden Betriebs."
+      }
+    },
+    "section5": {
+      "title": "Leistung",
+      "description": {
+        "block1": "Ein Leistungscode erfordert, dass das Gebäude als Ganzes einem bestimmten Standard entspricht, z. B. weniger Energie verbraucht als das gleiche Gebäude, das nach vorgeschriebenem Code gebaut wurde.",
+        "block2": "Bei der Entwicklung und Nutzung unserer Software haben wir jedoch festgestellt, dass durch das Befolgen des Leistungspfads oft Tausende oder Zehntausende von Dollar an Bau- und Materialkosten eingespart werden können.",
+        "block3": "Der Grund, warum Leute dem Leistungspfad nicht folgen, ist, dass er entweder einen Energiebewerter oder eine komplexe Energiemodellierungssoftware (oder beides) erfordert."
+      }
+    }
+  },
+  "order": {
+    "booking": {
+      "title": "Buchungsinfo",
+      "startDate": "Startdatum:",
+      "endDate": "Enddatum:",
+      "selectedCheckboxes": "Ausgewählte Checkboxen:",
+      "selectedOption": "Ausgewählte Option:"
+    },
+    "user": {
+      "title": "Benutzerinfo",
+      "firstName": "Vorname:",
+      "lastName": "Nachname:",
+      "email": "Email:"
+    },
+    "terms": {
+      "title": "Ich habe gelesen und stimme zu",
+      "link": "Allgemeine Geschäftsbedingungen",
+      "modal": {
+        "title": "Allgemeine Geschäftsbedingungen",
+        "description": "Es ist zu beachten, dass der Inhalt standardmäßig nicht mittig ausgerichtet wird. Sie können auf die Schaltfläche Abbrechen oder das Symbol Beenden oben rechts klicken oder einfach außerhalb des Dialogfensters klicken.",
+        "cancel": "Abbrechen"
+      }
+    },
+    "send": "Bestellung senden",
+    "loading": "Laden",
+    "success": "Erfolg! Danke für die Bestellung."
+  },
+  "findBar": {
+    "title": "Daten auswählen",
+    "separator": "An",
+    "start": "Startdatum",
+    "end": "Enddatum"
+  },
+  "404": {
+    "title": "SEITE NICHT GEFUNDEN."
+  }
+}

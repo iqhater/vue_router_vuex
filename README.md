@@ -7,6 +7,10 @@ Test vue 3 project with i18n internationalization and vuex store
 
 [Live demo](https://vuetest.fulldev.xyz)
 
+## Screenshot
+
+![Screenshot](./vuetest_website_screenshot.png)
+
 ## Tech stack
 
 - Vue 3 (vuex, vue-router)
