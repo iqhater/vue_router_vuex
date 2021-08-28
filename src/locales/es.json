@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "home": "Hogar",
+    "options": "Opciones",
+    "user": "Información de usuario",
+    "faq": "Preguntas frecuentes",
+    "order": "Orden"
+  },
+  "options": {
+    "checkboxes": {
+      "label1": "Opción 1",
+      "label2": "Opción 2",
+      "label3": "Opción 3",
+      "label4": "Opción 4"
+    },
+    "dropdown": {
+      "title": "Seleccionar opción",
+      "option1": {
+        "value": "Uno",
+        "label": "Uno 1"
+      },
+      "option2": {
+        "value": "Dos",
+        "label": "Dos 2"
+      },
+      "option3": {
+        "value": "Tres",
+        "label": "Tres 3"
+      },
+      "option4": {
+        "value": "Cuatro",
+        "label": "Cuatro 4"
+      },
+      "option5": {
+        "value": "Cinco",
+        "label": "Cinco 5"
+      }
+    }
+  },
+  "user": {
+    "title": "Información de usuario",
+    "firstName": {
+      "title": "Nombre",
+      "error1": "Introduzca el nombre correcto",
+      "error2": "La longitud debe ser de 2 a 18"
+    },
+    "lastName": "Apellido",
+    "email": {
+      "title": "Correo electrónico",
+      "error1": "Introduzca la dirección de correo electrónico",
+      "error2": "Introduzca la dirección de correo electrónico correcta"
+    },
+    "reset": "Reset"
+  },
+  "faq": {
+    "section1": {
+      "title": "Coherencia",
+      "description": {
+        "block1": "Consistente con la vida real: en línea con el proceso y la lógica de la vida real, y cumpliendo con los lenguajes y hábitos a los que los usuarios están acostumbrados",
+        "block2": "Consistente dentro de la interfaz: todos los elementos deben ser consistentes, como: estilo de diseño, iconos y textos, posición de los elementos, etc."
+      }
+    },
+    "section2": {
+      "title": "Comentarios",
+      "description": {
+        "block1": "Comentarios de operaciones: permite a los usuarios percibir claramente sus operaciones mediante actualizaciones de estilo y efectos interactivos.",
+        "block2": "Comentarios visuales: refleja el estado actual actualizando o reorganizando elementos de la página"
+      }
+    },
+    "section3": {
+      "title": "Eficiencia",
+      "description": {
+        "block1": "Simplifique el proceso: mantenga el proceso operativo simple e intuitivo",
+        "block2": "Definido y claro: enuncia tus intenciones claramente para que los usuarios puedan entender y tomar decisiones rápidamente",
+        "block3": "Fácil de identificar: la interfaz debe ser sencilla, lo que ayuda a los usuarios a identificar y los libera de memorizar y recordar"
+      }
+    },
+    "section4": {
+      "title": "Controlabilidad",
+      "description": {
+        "block1": "Toma de decisiones: dar consejos sobre operaciones es aceptable, pero no tomar decisiones por los usuarios",
+        "block2": "Consecuencias controladas: los usuarios deben tener la libertad de operar, incluyendo cancelar, abortar o terminar la operación actual"
+      }
+    },
+    "section5": {
+      "title": "Rendimiento",
+      "description": {
+        "block1": "Un código de rendimiento requiere que el edificio en su conjunto funcione según un cierto estándar, por ejemplo, use menos energía que el mismo edificio construido según el código prescriptivo.",
+        "block2": "Sin embargo, al desarrollar y utilizar nuestro software, hemos descubierto que a menudo hay miles o decenas de miles de dólares en costos de construcción y materiales que se pueden ahorrar siguiendo el camino del rendimiento",
+        "block3": "La razón por la que la gente no sigue la ruta del rendimiento es que requiere un evaluador de energía o un software de modelado de energía complejo (o ambos)"
+      }
+    }
+  },
+  "order": {
+    "booking": {
+      "title": "Información de reserva",
+      "startDate": "Fecha de inicio:",
+      "endDate": "Fecha de finalización:",
+      "selectedCheckboxes": "Casillas de verificación seleccionadas:",
+      "selectedOption": "Opción seleccionada:"
+    },
+    "user": {
+      "title": "Información de usuario",
+      "firstName": "Nombre:",
+      "lastName": "Apellido:",
+      "email": "Correo electrónico:"
+    },
+    "terms": {
+      "title": "He leído y estoy de acuerdo con",
+      "link": "Términos y condiciones",
+      "modal": {
+        "title": "Términos y condiciones",
+        "description": "Debe tenerse en cuenta que el contenido no se alineará en el centro de forma predeterminada. Puede hacer clic en el botón cancelar o salir del icono en la posición superior derecha o simplemente hacer clic fuera de la ventana de diálogo.",
+        "cancel": "Cancelar"
+      }
+    },
+    "send": "Enviar pedido",
+    "loading": "Cargando",
+    "success": "¡Éxito! Gracias por el pedido"
+  },
+  "findBar": {
+    "title": "Elegir fechas",
+    "separator": "Para",
+    "start": "Fecha de inicio",
+    "end": "Fecha de finalización"
+  },
+  "404": {
+    "title": "PAGINA NO ENCONTRADA."
+  }
+}

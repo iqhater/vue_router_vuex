@@ -12,6 +12,7 @@ Test vue 3 project with i18n internationalization and vuex store
 - Vue 3 (vuex, vue-router)
 - Vite
 - i18n
+- element-plus
 - pnpm
 
 ## Project setup
