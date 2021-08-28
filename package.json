@@ -1,7 +1,6 @@
 {
   "name": "vue_router_vuex_test",
   "version": "0.10.4",
-  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
