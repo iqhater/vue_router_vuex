@@ -2,7 +2,6 @@ import {
   createRouter,
   createWebHistory
 } from "vue-router";
-import Home from "../views/Home.vue";
 import i18n from "../i18n";
 
 i18n.locale = "en"
@@ -14,41 +13,51 @@ const routes = [{
   {
     path: "/:pathMatch(.*)*",
     name: "404",
-    component: () => import("../views/404.vue"),
+    component: () => import("../pages/404.vue"),
   },
   {
     path: "/:lang",
     component: {
       template: "<router-view />",
     },
+    beforeEnter: (to, from) => {
+
+      const locales = ["en", "ru", "es", "de"];
+      const exists = locales.find(locale => locale === to.params.lang)
+
+      if (!exists) return {
+        name: "404",
+        params: {
+          pathMatch: to.path.split('/').slice(1)
+        },
+        query: to.query,
+        hash: to.hash,
+      }
+    },
     children: [{
         path: "/:lang",
         name: "home",
-        component: Home,
+        component: () => import("../pages/Home.vue")
       },
       {
         path: "user",
         name: "user",
-        // route level code-splitting
-        // this generates a separate chunk (user.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () =>
-          import("../views/User.vue"),
+        component: () => import("../pages/User.vue"),
       },
       {
         path: "options",
         name: "options",
-        component: () => import("../views/Options.vue"),
+        component: () => import("../pages/Options.vue"),
       },
       {
         path: "faq",
         name: "faq",
-        component: () => import("../views/Faq.vue"),
+        component: () => import("../pages/Faq.vue"),
       },
       {
         path: "order",
         name: "order",
-        component: () => import("../views/Order.vue"),
+        component: () => import("../pages/Order.vue"),
       },
     ],
   },
@@ -56,7 +65,6 @@ const routes = [{
 
 const router = createRouter({
   history: createWebHistory(),
-  // base: process.env.BASE_URL,
   routes,
 });
 
