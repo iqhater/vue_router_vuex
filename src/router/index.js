@@ -1,22 +1,28 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHistory
+} from "vue-router";
 import Home from "../views/Home.vue";
 import i18n from "../i18n";
 
-const routes = [
-  {
+i18n.locale = "en"
+
+const routes = [{
     path: "/",
     redirect: `/${i18n.locale}`,
   },
   {
+    path: "/:pathMatch(.*)*",
+    name: "404",
+    component: () => import("../views/404.vue"),
+  },
+  {
     path: "/:lang",
     component: {
-      render(c) {
-        return c("router-view");
-      },
+      template: "<router-view />",
     },
-    children: [
-      {
-        path: "/",
+    children: [{
+        path: "/:lang",
         name: "home",
         component: Home,
       },
@@ -24,10 +30,10 @@ const routes = [
         path: "user",
         name: "user",
         // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
+        // this generates a separate chunk (user.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () =>
-          import(/* webpackChunkName: "about" */ "../views/User.vue"),
+          import("../views/User.vue"),
       },
       {
         path: "options",
@@ -44,17 +50,13 @@ const routes = [
         name: "order",
         component: () => import("../views/Order.vue"),
       },
-      {
-        path: "*",
-        component: () => import("../views/404.vue"),
-      },
     ],
   },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  base: process.env.BASE_URL,
+  history: createWebHistory(),
+  // base: process.env.BASE_URL,
   routes,
 });
 

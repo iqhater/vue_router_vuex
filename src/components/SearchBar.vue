@@ -9,7 +9,7 @@
         :start-placeholder="$t('findBar.start')"
         :end-placeholder="$t('findBar.end')"
         @change="handleDates"
-        format="dd.MM.yyyy HH:mm"
+        format="DD.MM.YYYY HH:mm"
       ></el-date-picker>
     </div>
   </div>

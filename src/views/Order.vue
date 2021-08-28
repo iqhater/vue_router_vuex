@@ -44,16 +44,18 @@
     </el-checkbox>
     <el-dialog
       :title="$t('order.terms.modal.title')"
-      :visible="centerDialogVisible"
+      v-model="centerDialogVisible"
       width="90%"
       center
     >
       <span>{{ $t("order.terms.modal.description") }}</span>
-      <span slot:="footer" class="dialog-footer">
-        <el-button type="info" plain @click="centerDialogVisible = false">{{
-          $t("order.terms.modal.cancel")
-        }}</el-button>
-      </span>
+      <template #footer>
+        <span class="dialog-footer">
+          <el-button type="info" plain @click="centerDialogVisible = false">{{
+            $t("order.terms.modal.cancel")
+          }}</el-button>
+        </span>
+      </template>
     </el-dialog>
     <el-button
       id="send-btn"

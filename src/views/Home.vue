@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <FindBar />
+    <SearchBar />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import FindBar from "@/components/FindBar.vue";
+import SearchBar from "../components/SearchBar.vue";
 
 export default {
   name: "home",
   components: {
-    FindBar,
+    SearchBar,
   },
 };
 </script>

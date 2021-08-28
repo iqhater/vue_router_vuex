@@ -1,6 +1,6 @@
 <template>
   <div class="options">
-    <FindBar />
+    <SearchBar />
     <div class="checkboxes">
       <el-checkbox
         v-for="(checkbox, index) in checkboxes"
@@ -33,7 +33,7 @@
 
 <script>
 // @ is an alias to /src
-import FindBar from "@/components/FindBar.vue";
+import SearchBar from "../components/SearchBar.vue";
 import { mapGetters, mapMutations } from "vuex";
 
 export default {
@@ -118,7 +118,7 @@ export default {
     this.handleDropdownOption();
   },
   components: {
-    FindBar,
+    SearchBar,
   },
 };
 </script>

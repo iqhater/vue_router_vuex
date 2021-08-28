@@ -1,26 +1,24 @@
 ![Deploy to Raspberry Pi](https://github.com/iqhater/vue_router_vuex/workflows/Deploy%20to%20Raspberry%20Pi/badge.svg?branch=master)
 
 # vue_router_vuex_test
+Test vue project with i18n internationalization and vuex store
 
 ## Project setup
 ```
-npm install
+pnpm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+pnpm dev
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+pnpm build
 ```
 
-### Lints and fixes files
+### Locally preview for production
 ```
-npm run lint
+pnpm serve
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

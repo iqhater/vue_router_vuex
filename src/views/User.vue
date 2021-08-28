@@ -25,7 +25,6 @@
         ]"
       >
         <el-input
-          value="dynamicValidateForm.firstName"
           v-model="dynamicValidateForm.firstName"
           @change="handleName()"
         ></el-input>

@@ -1,41 +1,43 @@
 <template>
   <div class="locale">
-    <el-dropdown trigger="click" @command="setLocale">
+    <el-dropdown @command="setLocale">
       <span class="el-dropdown-link">
         <img :src="getImgUrl" alt="flag" class="flags" />
         <span>{{ $i18n.locale.toUpperCase() }}</span>
         <i class="el-icon-arrow-down el-icon--right"></i>
       </span>
-      <el-dropdown-menu slot:="dropdown">
-        <el-dropdown-item command="en">
-          <img
-            src="../assets/img/flags/en.svg"
-            alt="flag_icon_en"
-            class="flags"
-          />English
-        </el-dropdown-item>
-        <el-dropdown-item command="ru">
-          <img
-            src="../assets/img/flags/ru.svg"
-            alt="flag_icon_ru"
-            class="flags"
-          />Русский
-        </el-dropdown-item>
-        <el-dropdown-item command="es">
-          <img
-            src="../assets/img/flags/es.svg"
-            alt="flag_icon_es"
-            class="flags"
-          />Español
-        </el-dropdown-item>
-        <el-dropdown-item command="de">
-          <img
-            src="../assets/img/flags/de.svg"
-            alt="flag_icon_de"
-            class="flags"
-          />Deutsch
-        </el-dropdown-item>
-      </el-dropdown-menu>
+      <template #dropdown>
+        <el-dropdown-menu>
+          <el-dropdown-item command="en">
+            <img
+              src="../assets/img/flags/en.svg"
+              alt="flag_icon_en"
+              class="flags"
+            />English
+          </el-dropdown-item>
+          <el-dropdown-item command="ru">
+            <img
+              src="../assets/img/flags/ru.svg"
+              alt="flag_icon_ru"
+              class="flags"
+            />Русский
+          </el-dropdown-item>
+          <el-dropdown-item command="es">
+            <img
+              src="../assets/img/flags/es.svg"
+              alt="flag_icon_es"
+              class="flags"
+            />Español
+          </el-dropdown-item>
+          <el-dropdown-item command="de">
+            <img
+              src="../assets/img/flags/de.svg"
+              alt="flag_icon_de"
+              class="flags"
+            />Deutsch
+          </el-dropdown-item>
+        </el-dropdown-menu>
+      </template>
     </el-dropdown>
   </div>
 </template>
@@ -44,7 +46,11 @@
 export default {
   computed: {
     getImgUrl() {
-      return require(`../assets/img/flags/${this.$i18n.locale}.svg`);
+      const imgUrl = new URL(
+        `../assets/img/flags/${this.$i18n.locale}.svg`,
+        import.meta.url
+      );
+      return imgUrl;
     },
   },
   methods: {
@@ -82,5 +88,10 @@ export default {
 }
 .el-icon-arrow-down {
   font-size: 12px;
+}
+
+.el-dropdown-menu__item {
+  margin: 7px !important;
+  border-radius: 5px;
 }
 </style>
