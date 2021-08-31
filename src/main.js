@@ -27,6 +27,7 @@ import "element-plus/packages/theme-chalk/src/base.scss";
 
 // import locale from "element-plus/lib/locale";
 // import en from "element-plus/lib/locale/lang/en";
+// import ru from "element-plus/lib/locale/lang/ru";
 import i18n from "./i18n";
 // import { use } from "element-plus/lib/locale";
 // locale.use(en);
@@ -65,6 +66,6 @@ createApp(Root)
   .use(ElMessageBox)
   .use(ElAlert)
   // .use(ElementPlus, {
-  //   locale: en
+  //   locale: ru
   // })
   .mount("#app");
