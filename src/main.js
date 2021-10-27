@@ -24,6 +24,7 @@ import {
 // import ElementPlus from "element-plus";
 // import "element-plus/lib/theme-chalk/index.css";
 import "element-plus/packages/theme-chalk/src/base.scss";
+import "./styles/element-plus-custom.scss";
 
 // import locale from "element-plus/lib/locale";
 // import en from "element-plus/lib/locale/lang/en";

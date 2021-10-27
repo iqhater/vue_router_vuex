@@ -1,0 +1,62 @@
+@media screen and (max-width: 599px) {
+  /* Date and time inputs container */
+  .el-range-editor.el-input__inner {
+    flex-direction: column;
+    width: 85%;
+    height: 95px;
+
+    .el-range-input {
+      width: 100%;
+      padding: 5px 0;
+    }
+
+    /* Icons time and close */
+    .el-range__icon {
+      display: none;
+    }
+  }
+
+  .el-picker-panel {
+    width: 100%;
+  }
+
+  /* Calendar container */
+  .el-date-range-picker .el-picker-panel__body {
+    min-width: unset;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    .el-date-range-picker__time-header {
+      width: 90%;
+
+      .el-date-range-picker__editors-wrap {
+        display: flex;
+        flex-direction: column;
+
+        .el-date-range-picker__time-picker-wrap {
+          display: flex;
+          padding: 5px;
+        }
+      }
+    }
+
+    .el-date-range-picker__content {
+      width: unset;
+    }
+
+    .el-date-table td span {
+      font-size: 1.2em;
+    }
+  }
+
+  .el-date-editor .el-range__close-icon {
+    display: none;
+  }
+
+  .el-picker-panel .el-time-panel {
+    margin: 5px -40px;
+  }
+}

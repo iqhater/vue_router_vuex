@@ -62,8 +62,12 @@ export default {
     }
   },
   data() {
+    const defaultDays = 6;
     return {
-      dates: [new Date(), new Date().setDate(new Date().getDate() + 6)],
+      dates: [
+        new Date(),
+        new Date().setDate(new Date().getDate() + defaultDays),
+      ],
     };
   },
 };
@@ -83,6 +87,12 @@ export default {
     h4 {
       margin: 0;
     }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .search {
+    height: unset;
   }
 }
 </style>
