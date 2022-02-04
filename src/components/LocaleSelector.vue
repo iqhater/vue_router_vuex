@@ -4,7 +4,6 @@
       <span class="el-dropdown-link">
         <img :src="getImgUrl" alt="flag" class="flags" />
         <span>{{ $i18n.locale.toUpperCase() }}</span>
-        <i class="el-icon-arrow-down el-icon--right"></i>
       </span>
       <template #dropdown>
         <el-dropdown-menu>
@@ -86,10 +85,6 @@ export default {
   cursor: pointer;
   color: #2c3e50;
 }
-.el-icon-arrow-down {
-  font-size: 12px;
-}
-
 .el-dropdown-menu__item {
   margin: 7px !important;
   border-radius: 5px;

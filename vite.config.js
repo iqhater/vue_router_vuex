@@ -4,7 +4,7 @@ import {
 } from "vite";
 import vue from '@vitejs/plugin-vue'
 import VueI18n from '@intlify/vite-plugin-vue-i18n';
-import VitePluginElementPlus from 'vite-plugin-element-plus'
+import VitePluginElementPlus from 'unplugin-element-plus/vite'
 
 /**
  * @type {import('vite').UserConfig}
@@ -35,7 +35,7 @@ export default defineConfig({
     VitePluginElementPlus({
       // if you need to use the *.scss source file, you need to uncomment this comment
       // useSource: true,
-      // prefix: "El"
+      // prefix: "El",
       // lib: "element-plus",
       // format: "esm"
     }),
