@@ -20,7 +20,8 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'index.html'),
       }
-    }
+    },
+    chunkSizeWarningLimit: 1000,
   },
   pluginOptions: {
     i18n: {
