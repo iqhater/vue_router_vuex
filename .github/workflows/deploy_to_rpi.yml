@@ -37,7 +37,9 @@ jobs:
       - name: Deploy via SCP
         uses: garygrossgarten/github-action-scp@release
         with:
-          local: dist
+          local: /home/runner/work/vue_router_vuex/vue_router_vuex/dist/
+          recursive: true
+          concurrency: 4
           remote: ${{ secrets.REMOTE_PATH }}
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
