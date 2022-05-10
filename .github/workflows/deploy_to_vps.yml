@@ -40,6 +40,7 @@ jobs:
           local: /home/runner/work/vue_router_vuex/vue_router_vuex/dist/
           recursive: true
           concurrency: 4
+          atomicPut: true
           remote: ${{ secrets.VPS_REMOTE_PATH }}
           host: ${{ secrets.VPS_HOST }}
           port: ${{ secrets.SSH_PORT }}
